@@ -1,0 +1,112 @@
+// Sachin and his Pills
+
+ #include<iostream>
+using namespace std;
+
+int main()
+{
+	int yy,mm,dd,t;
+	char cc;
+
+	cin>>t;
+	while(t--)
+	{
+		cin>>yy>>cc>>mm>>cc>>dd;
+
+		if(mm==1 || mm==3 || mm==5 || mm==7 || mm==8 || mm==10 || mm==12)
+		{
+			cout<<(31-dd)/2+1<<endl;
+		}
+		else if(mm==4 || mm==6 || mm==9 || mm==11)
+		{
+			cout<<(30-dd+31)/2+1<<endl;
+		}
+		else if(mm==2)
+		{
+			if((yy%4==0 && yy%100!=0)||yy%400==0)
+				cout<<(29-dd)/2+1<<endl;
+			else
+				cout<<(28-dd+31)/2+1<<endl;
+		}
+	}
+}
+
+
+// Digits in Word
+
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+long int n,sum=0,r;        
+cin>>n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum*10+r;    
+n=n/10;    
+}    
+n=sum;    
+while(n>0)    
+{    
+r=n%10;    
+switch(r)    
+{    
+case 1:    
+cout<<"One ";    
+break;    
+case 2:    
+cout<<"Two ";    
+break;    
+case 3:    
+cout<<"Three ";  
+break;    
+case 4:    
+cout<<"Four ";  
+break;    
+case 5:    
+cout<<"Five ";  
+break;    
+case 6:    
+cout<<"Six ";   
+break;    
+case 7:  
+cout<<"Seven ";  
+break;  
+case 8:    
+cout<<"Eight ";    
+break;    
+case 9:    
+cout<<"Nine ";  
+break;    
+case 0:    
+cout<<"Zero ";  
+break;    
+default:    
+cout<<"tttt ";    
+break;    
+}    
+n=n/10;    
+}    
+}  
+
+//Letter Pattern
+
+#include <iostream>
+using namespace std;
+int main() 
+{   int n,k=1;
+    cin>>n;
+    for(int i=0;i<=n;i++)
+    {
+      for(int j=0;j<i;j++)
+      {
+        cout<<char(k+64);
+        k++;
+        if((k+64)>90)
+        {k=1;}
+      }
+ cout<<"\n";
+    }
+	return 0;
+}
